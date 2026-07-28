@@ -1,0 +1,793 @@
+/*====================================================
+    GLOBAL RESET
+====================================================*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#000;
+    color:#fff;
+    font-family:Arial, Helvetica, sans-serif;
+    line-height:1.5;
+    min-height:100vh;
+}
+
+/*====================================================
+    COMMON
+====================================================*/
+
+a{
+    color:#fff;
+    text-decoration:none;
+    transition:.3s;
+}
+
+a:hover{
+    color:#bdbdbd;
+}
+
+ul{
+    list-style:none;
+}
+
+img{
+    max-width:100%;
+    display:block;
+}
+
+/*====================================================
+    HEADER
+====================================================*/
+
+header{
+
+    position:absolute;
+
+    top:0;
+    left:0;
+
+    width:100%;
+
+    padding:30px 60px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    z-index:100;
+
+}
+
+/*====================================================
+    LOGO
+====================================================*/
+
+.logo-container{
+    display:flex;
+    flex-direction:column;
+}
+
+.logo{
+    font-family: 'Coolvetica Rg It', sans-serif;
+    letter-spacing:10px;
+    line-height:1;
+    font-size:7rem;
+    
+}
+
+/*====================================================
+    NAVIGATION
+====================================================*/
+
+nav ul{
+    display:flex;
+    gap:35px;
+}
+
+nav a{
+    font-size:1rem;
+    color:#e8e8e8;
+}
+
+nav a:hover{
+    color:#fff;
+}
+
+/*====================================================
+    MAIN
+====================================================*/
+
+main{
+    width:90%;
+    max-width:1200px;
+    margin:80px auto;
+    margin-bottom:20px;
+}
+
+/* Use this on pages where content (like the projects grid)
+   needs to stretch the FULL browser width instead of being
+   capped at 1200px. Add class="main-full" to <main> in HTML. */
+main.main-full{
+    width:100%;
+    max-width:none;
+    margin:0;
+    padding:0;
+}
+
+/*====================================================
+    HERO 
+====================================================*/
+
+.hero{
+
+    height:100vh;
+
+    display:flex;
+
+    align-items:center;
+
+    padding:0 80px;
+
+}
+
+.hero-content{
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+.hero-content h1{
+
+    font-size:6rem;
+
+    line-height:1;
+
+}
+
+/*====================================================
+    ABOUT
+====================================================*/
+
+.about{
+    width:90%;
+    max-width:900px;
+    margin:120px auto;
+    margin-bottom:75px;
+    padding-top:40px;
+}
+
+.about-content{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
+    margin-top: 25px;
+}
+
+.about-content h2{
+    font-size:2.5rem;
+    margin-bottom:30px;
+    font-family: 'Coolvetica Rg Cond', sans-serif;; 
+    letter-spacing:1px;
+    font-style:normal;
+}
+
+.about-content p{
+    max-width:750px;
+    margin-bottom:25px;
+    color:#cfcfcf;
+    font-size:1.09rem;
+    line-height:1.5;
+}
+
+.contact-btn{
+    display:inline-block;
+    margin-top:20px;
+    padding:10px 38px;
+
+    background:transparent;
+    color:#fff;
+    border:2px solid #fff;
+
+    text-transform:uppercase;
+    letter-spacing:2px;
+    font-weight:bold;
+    font-style:italic;
+
+    transition:
+        background-color .3s ease,
+        color .3s ease,
+        transform .2s ease;
+}
+
+.contact-btn:hover{
+    background:#fff;
+    color:#000;
+    transform:translateY(-2px);
+}
+
+
+/*====================================================
+    CONTACT
+====================================================*/
+
+.contact{
+    width:90%;
+    max-width:800px;
+    margin:120px auto;
+    margin-bottom:10px;
+    padding-top:40px;
+}
+
+.contact-content{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
+    margin-top: 25px;
+}
+
+.contact-content h2{
+    font-family: 'Coolvetica Rg Cond', sans-serif;
+    font-size:2.6rem;
+    letter-spacing:1px;
+    margin-bottom:30px;
+    font-style:normal;
+}
+
+.contact-content p{
+    max-width:700px;
+    color:#cfcfcf;
+    line-height:1.5;
+    margin-bottom:35px;
+    font-size: 1.09rem;
+}
+
+.contact-info{
+    margin-top:10px;
+    margin-bottom:10px;
+}
+
+.contact-info h3{
+    font-family: 'Coolvetica Rg Cond', sans-serif;
+    font-size:2.2rem;
+    letter-spacing: 1.7px;
+    margin-bottom:0px;
+    font-style:normal;
+}
+
+.contact-info a{
+    display:block;
+    margin:1px 0;
+    color:#fff;
+    transition:.3s;
+}
+
+.contact-info a:hover{
+    color:#bdbdbd;
+}
+
+/*==========================================
+    CONTACT LINKS
+==========================================*/
+
+.contact-links{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:flex-start;
+
+    gap:60px;
+
+    margin-top: 20px;
+
+}
+
+.contact-info{
+
+    text-align:center;
+
+}
+
+.social-icons a,
+.contact-info a{
+
+    font-size:1.8rem;
+
+    color:#fff;
+
+    transition:.3s ease;
+
+}
+
+.social-icons a:hover,
+.contact-info a:hover{
+
+    color:#bdbdbd;
+
+}
+/*====================================================
+    ABOUT FOOTER
+====================================================*/
+
+.about-footer{
+    width:90%;
+    max-width:1200px;
+    margin:80px auto 40px;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+.about-footer .social{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
+    gap:12px;
+}
+
+.about-footer .copyright{
+    width:100%;
+    margin-top:60px;
+    padding-top:25px;
+    border-top:1px solid #222;
+    text-align:center;
+}
+
+/*====================================================
+    SOCIAL
+====================================================*/
+
+.social{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
+    gap:12px;
+}
+
+.social h3{
+    margin-bottom:10px;
+    font-family:"Bebas Neue", sans-serif;
+    letter-spacing:4px;
+    font-size:2rem;
+}
+
+.social a{
+    color:#cfcfcf;
+    transition:.3s;
+}
+
+.social a:hover{
+    color:#fff;
+}
+
+/*====================================================
+    COPYRIGHT
+====================================================*/
+
+.copyright{
+    grid-column:1 / -1;
+
+    width:100%;
+
+    margin-top:40px;
+    padding:35px 0 45px;
+
+    border-top:1px solid #222;
+
+    text-align:center;
+
+    color:#888;
+    font-size:.95rem;
+}
+
+footer{
+    width:100%;
+    padding:40px 60px;
+}
+
+/*====================================================
+    SOCIAL ICONS
+====================================================*/
+
+.social-icons{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:25px;
+
+    margin-top:1px;
+
+}
+
+.social-icons a{
+
+    color:#fff;
+
+    font-size:1.8rem;
+
+    transition:.3s ease;
+
+}
+
+.social-icons a:hover{
+
+    transform:translateY(-5px);
+
+}
+
+.social-icons .fa-instagram:hover{
+    color:#E4405F;
+}
+
+.social-icons .fa-linkedin:hover{
+    color:#0A66C2;
+}
+
+.social-icons .fa-behance:hover{
+    color:#1769FF;
+}
+
+/*====================================================
+    EMAIL ICON
+====================================================*/
+
+.email-icon{
+
+    display:flex;
+
+    justify-content:center;
+
+    margin-top:0px;
+
+}
+
+.email-icon a{
+
+    color:#fff;
+
+    font-size:1rem;
+
+    transition:.3s ease;
+
+}
+
+.email-icon a:hover{
+
+    color:#EA4335;   /* Gmail red */
+
+    transform:translateY(-5px);
+
+}
+
+/*====================================================
+    LOGO LINK
+====================================================*/
+
+.logo-link{
+    text-decoration:none;
+    color:inherit;
+    display:inline-block;
+}
+
+.logo-link:hover{
+    color:#fff;
+}
+
+.logo-link .logo{
+    transition:transform .3s ease;
+}
+
+.logo-link:hover .logo{
+    transform:scale(1.05);
+}
+
+/*====================================================
+    PROJECT PAGE
+====================================================*/
+
+.project-page{
+
+    width:100%;
+    padding:140px 60px 60px;
+    margin:0;
+    text-align:center;
+
+}
+
+.project-page h1{
+
+    font-size:2.6rem;
+    margin-top: 45px;
+    margin-bottom:10px;
+    font-family: 'Coolvetica Rg Cond';
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+.project-page p{
+
+    color:#999;
+    margin-bottom:50px;
+
+}
+
+
+/*=========================
+    GALLERY
+=========================*/
+
+.gallery{
+    width:90%;
+    max-width:1700px;
+    margin:50px auto 120px;
+
+    display:grid;
+    grid-template-columns:repeat(auto-fill, minmax(280px, 1fr));
+    gap: 8px;
+}
+
+.gallery img{
+    width:100%;
+    aspect-ratio:4/5;
+    object-fit:cover;
+    border-radius:15px;
+    transition:.35s;
+}
+
+.gallery img:hover{
+    transform:scale(1.02);
+}
+
+/*====================================================
+    PROJECT GRID
+====================================================*/
+
+.projects-grid{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap:8px;
+    grid-auto-flow: dense;
+    border-radius: 15px;
+
+    padding: 200px 60px 20px;
+}
+
+
+/*====================================================
+    CARD
+====================================================*/
+
+.project-card{
+    position: relative;
+    overflow: hidden;
+    border-radius: 6px;
+    aspect-ratio: 16 / 9;
+    background: #111;
+    width: 100%;
+}
+
+.project-card img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:transform .2s ease;
+    will-change:transform;
+    backface-visibility:hidden;
+    transform:translateZ(0);
+}
+
+.overlay{
+    transition: opacity .2s ease;
+}
+
+.project-card:hover img{
+    transform: scale(1.05);
+}
+
+/* Aston Martin Vantage 2026 */
+
+.cover-astonmartinvantage{
+    object-position:center 70%;
+    object-fit: cover;
+}
+
+/* Ferrari 296 GTS 2026 */
+
+.cover-ferrari296gts2026{
+    object-position:center 50%;
+    object-fit: cover;
+}
+
+/* Lotus Emira 2026 */
+
+.cover-lotusemira2026{
+    object-position:center 72%;
+    object-fit: cover;
+}
+
+/* BMW M340i 2026 */
+
+.cover-bmwm340i2026{
+    object-position:center 66%;
+    object-fit: cover;
+}
+
+/* Lamborghini 2026 */
+
+.cover-lamborghini2026{
+    object-position:center 80%;
+    object-fit: cover;
+}
+
+/* Ferrari 296 Speciale A 2026 */
+
+.cover-ferrari296specialea2026{
+    object-position:center 70%;
+    object-fit: cover;
+}
+
+/* Aston Martin DBX 707 2026 */
+
+.cover-astonmartindbx7072026{
+    object-position:center 65%;
+    object-fit: cover;
+}
+
+/* Ferrari Roma 2026 */
+
+.cover-ferrariroma2026{
+    object-position:center 65%;
+    object-fit: cover;
+}
+
+/* Lotus Eletre 2026 */
+
+.cover-lotuseletre2026{
+    object-position:center 83%;
+    object-fit: cover;
+}
+
+/* Mini Cooper 2026 */
+
+.cover-minicooper2026{
+    object-position:center 75%;
+    object-fit: cover;
+}
+
+/*====================================================
+    OVERLAY
+====================================================*/
+
+.overlay{
+
+    position:absolute;
+    inset:0;
+
+    background:rgba(255,255,255,.85);
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    opacity:0;
+    transition:.2s ease;
+}
+
+.overlay h2{
+
+    font-family:'Coolvetica Rg Cond',sans-serif;
+    font-size: 2rem;
+    letter-spacing:1px;
+    text-transform:uppercase;
+    line-height: 30px;
+
+    color:#000;
+
+    margin-bottom:6px;
+}
+
+.overlay p{
+
+    font-size: 1rem;
+    color:#242424;
+    letter-spacing:.5px;
+}
+
+.project-card:hover .overlay{
+
+    opacity:1;
+}
+
+.project-card:hover img{
+
+    transform:scale(1.08);
+}
+
+
+/*====================================================
+    RESPONSIVE
+====================================================*/
+
+@media(max-width:1600px){
+
+    .projects-grid{
+
+        grid-template-columns:repeat(4,1fr);
+
+    }
+
+}
+
+@media(max-width:1200px){
+
+    .projects-grid{
+
+        grid-template-columns:repeat(3,1fr);
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .projects-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+}
+
+@media(max-width:500px){
+
+    .projects-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+
+/*====================================================
+    FONT
+====================================================*/
+
+@font-face {
+  font-family: 'Coolvetica Rg It'; /* Clean, recognizable name */
+  src: url('../Fonts/Coolvetica Rg It.woff2') format('woff2'); 
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Coolvetica Rg Cond'; /* Clean, recognizable name */
+  src: url('../Fonts/Coolvetica Rg Cond.woff2') format('woff2'); 
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
