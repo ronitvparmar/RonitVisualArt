@@ -591,10 +591,9 @@ footer{
     height:100%;
     object-fit:cover;
     transition:transform .2s ease;
-}
-
-.project-card:hover img{
     will-change:transform;
+    backface-visibility:hidden;
+    transform:translateZ(0);
 }
 
 .overlay{
