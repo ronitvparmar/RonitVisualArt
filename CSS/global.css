@@ -79,7 +79,7 @@ header{
     font-family: 'Coolvetica Rg It', sans-serif;
     letter-spacing:10px;
     line-height:1;
-    font-size:7rem;
+    font-size:5.2rem;
     
 }
 
@@ -89,11 +89,11 @@ header{
 
 nav ul{
     display:flex;
-    gap:35px;
+    gap:30px;
 }
 
 nav a{
-    font-size:1rem;
+    font-size:1.1rem;
     color:#e8e8e8;
 }
 
