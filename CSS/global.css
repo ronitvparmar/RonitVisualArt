@@ -448,35 +448,14 @@ footer{
 }
 
 /*====================================================
-    EMAIL ICON
+    EMAIL
 ====================================================*/
 
-.email-icon{
-
-    display:flex;
-
-    justify-content:center;
-
-    margin-top:0px;
-
-}
-
-.email-icon a{
-
-    color:#fff;
-
-    font-size:1rem;
-
-    transition:.3s ease;
-
-}
-
-.email-icon a:hover{
-
-    color:#EA4335;   /* Gmail red */
-
-    transform:translateY(-5px);
-
+.email-text {
+    margin-top: 8px;
+    font-size: 0.9rem;
+    color: #ffffff;
+    text-align: center;
 }
 
 /*====================================================
