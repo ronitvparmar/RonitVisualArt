@@ -537,18 +537,19 @@ footer{
 =========================*/
 
 .gallery{
-    width:90%;
+    width:100%;
     max-width:1700px;
     margin:50px auto 120px;
 
-    display:grid;
-    grid-template-columns:repeat(auto-fill, minmax(280px, 1fr));
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 8px;
 }
 
 .gallery img{
-    width:100%;
-    aspect-ratio:4/5;
+    height:450px;      /* controls the row height — tweak to taste */
+    width:auto;        /* width follows the image's own ratio */
     object-fit:cover;
     border-radius:15px;
     transition:.35s;
@@ -556,6 +557,22 @@ footer{
 
 .gallery img:hover{
     transform:scale(1.02);
+}
+
+/* smaller row height on smaller screens */
+@media(max-width:900px){
+    .gallery img{
+        height:220px;
+    }
+}
+
+@media(max-width:600px){
+    .gallery{
+        gap:6px;
+    }
+    .gallery img{
+        height:160px;
+    }
 }
 
 /*====================================================
@@ -634,7 +651,7 @@ footer{
 
 /* Lamborghini 2026 */
 
-.cover-lamborghini2026{
+.cover-lamborghiniurusse2026{
     object-position:center 80%;
     object-fit: cover;
 }
