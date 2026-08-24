@@ -670,6 +670,13 @@ footer{
     object-fit: cover;
 }
 
+/* Porsche 2026 */
+
+.cover-porsche2026{
+    object-position:center 69%;
+    object-fit: cover;
+}
+
 /*====================================================
     OVERLAY
 ====================================================*/
