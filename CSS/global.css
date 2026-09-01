@@ -757,11 +757,25 @@ footer{
     backface-visibility:hidden;
 }
 
+.project-card img{
+    -webkit-touch-callout: none; /* stops iOS long-press preview/save menu */
+    -webkit-user-select: none;
+    user-select: none;
+}
+
 .overlay{
     transition: opacity .2s ease;
 }
 
 .project-card:hover img{
+    transform: scale(calc(var(--zoom, 1) * 1.08));
+}
+
+.project-card.active .overlay{
+    opacity:1;
+}
+
+.project-card.active img{
     transform: scale(calc(var(--zoom, 1) * 1.08));
 }
 

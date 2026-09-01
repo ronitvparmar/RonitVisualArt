@@ -289,6 +289,37 @@
 
 </section>
 
+<script>
+(function(){
+    // Only run this logic on touch devices
+    const isTouch = window.matchMedia('(hover: none)').matches;
+    if(!isTouch) return;
+
+    const cards = document.querySelectorAll('.project-card');
+
+    cards.forEach(card => {
+        card.addEventListener('click', function(e){
+            const isActive = card.classList.contains('active');
+
+            if(!isActive){
+                // first tap: prevent navigation, just reveal overlay
+                e.preventDefault();
+                cards.forEach(c => c.classList.remove('active')); // close others
+                card.classList.add('active');
+            }
+            // if already active, let the second tap navigate normally
+        });
+    });
+
+    // tapping anywhere outside closes the open overlay
+    document.addEventListener('click', function(e){
+        if(!e.target.closest('.project-card')){
+            cards.forEach(c => c.classList.remove('active'));
+        }
+    });
+})();
+</script>
+
 </main>
 
     <!-- ==========================
