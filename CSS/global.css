@@ -841,6 +841,13 @@ footer{
     object-fit: cover;
 }
 
+/* Lamborghini Temerario 2026 */
+
+.cover-lamborghinitemerario2026{
+    object-position:center 80%;
+    object-fit: cover;
+}
+
 /*====================================================
     OVERLAY
 ====================================================*/
