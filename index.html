@@ -291,27 +291,30 @@
 
 <script>
 (function(){
-    // Only run this logic on touch devices
-    const isTouch = window.matchMedia('(hover: none)').matches;
-    if(!isTouch) return;
-
     const cards = document.querySelectorAll('.project-card');
+    let lastTouchTime = 0;
+
+    document.addEventListener('touchend', function(){
+        lastTouchTime = Date.now();
+    }, {passive:true});
 
     cards.forEach(card => {
-        card.addEventListener('click', function(e){
-            const isActive = card.classList.contains('active');
 
-            if(!isActive){
-                // first tap: prevent navigation, just reveal overlay
+        // block native long-press context menu (Android/desktop right-click on link)
+        card.addEventListener('contextmenu', e => e.preventDefault());
+
+        card.addEventListener('click', function(e){
+            const wasTouch = (Date.now() - lastTouchTime) < 500;
+            if(!wasTouch) return; // desktop mouse click: navigate normally
+
+            if(!card.classList.contains('active')){
                 e.preventDefault();
-                cards.forEach(c => c.classList.remove('active')); // close others
+                cards.forEach(c => c.classList.remove('active'));
                 card.classList.add('active');
             }
-            // if already active, let the second tap navigate normally
         });
     });
 
-    // tapping anywhere outside closes the open overlay
     document.addEventListener('click', function(e){
         if(!e.target.closest('.project-card')){
             cards.forEach(c => c.classList.remove('active'));
