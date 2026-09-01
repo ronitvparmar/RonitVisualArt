@@ -3,28 +3,38 @@
 
 <head>
 
-    <!-- Character Encoding -->
     <meta charset="UTF-8">
-
-    <!-- Responsive Design -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#000000">
 
     <!-- SEO -->
-    <meta name="description" content="Professional Automotive Photography Portfolio">
-    <meta name="keywords" content="Car Photography, Automotive Photography, Portfolio">
+    <title>Ronit Visual Art | Automotive Photography Portfolio</title>
+    <meta name="description" content="Cinematic automotive photography portfolio by Ronit — Ferrari, Lamborghini, Porsche, Aston Martin, BMW, Lotus & more, shot across India.">
+    <meta name="keywords" content="Car Photography, Automotive Photography, Portfolio, Ronit Visual Art">
     <meta name="author" content="Ronit">
+    <link rel="canonical" href="https://ronitvparmar.github.io/RonitVisualArt/">
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-    
-    <!-- Website Title -->
-    <title>Ronit Visual Art</title>
+    <!-- Open Graph / Social -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Ronit Visual Art">
+    <meta property="og:title" content="Ronit Visual Art | Automotive Photography Portfolio">
+    <meta property="og:description" content="Cinematic automotive photography portfolio by Ronit — Ferrari, Lamborghini, Porsche, Aston Martin, BMW, Lotus & more, shot across India.">
+    <meta property="og:image" content="https://ronitvparmar.github.io/RonitVisualArt/images/covers/porsche2026.jpg">
+    <meta property="og:url" content="https://ronitvparmar.github.io/RonitVisualArt/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Ronit Visual Art | Automotive Photography Portfolio">
+    <meta name="twitter:description" content="Cinematic automotive photography portfolio by Ronit — Ferrari, Lamborghini, Porsche, Aston Martin, BMW, Lotus & more, shot across India.">
+    <meta name="twitter:image" content="https://ronitvparmar.github.io/RonitVisualArt/images/covers/porsche2026.jpg">
+
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" sizes="any">
+    <link rel="icon" href="favicon.png" type="image/png">
+
+    <!-- Fonts: self-hosted, preloaded (no external font requests) -->
+    <link rel="preload" href="Fonts/Coolvetica%20Rg%20Cond.woff2" as="font" type="font/woff2" crossorigin>
 
     <!-- Global CSS -->
-    <link rel="stylesheet" href="../CSS/global.css">
+    <link rel="stylesheet" href="CSS/global.css">
 
 </head>
 
@@ -38,7 +48,7 @@
 
       <div class="logo-container">
 
-        <a href="../index.html" class="logo-link">
+        <a href="index.html" class="logo-link">
             <h1 class="logo">RVA</h1>
         </a>
 
@@ -65,15 +75,18 @@
 
 <main class="main-full">
 
+<h2 class="sr-only">Automotive Photography Portfolio — Ferrari, Lamborghini, Porsche, Aston Martin, BMW &amp; Lotus</h2>
+
 <section class="projects-grid">
 
     <!-- Project 1 -->
 
      <a href="projects/astonmartinvantage2026.html" class="project-card">
 
-        <img src="images/covers/astonmartinvantage2026.jpg"
-             alt="Aston Martin Vantage"
-             class="cover-astonmartinvantage">
+        <picture>
+            <source srcset="images/covers/astonmartinvantage2026.webp" type="image/webp">
+            <img src="images/covers/astonmartinvantage2026.jpg" alt="Aston Martin Vantage" class="cover-astonmartinvantage" width="800" height="1000" loading="eager" fetchpriority="high" decoding="async">
+        </picture>
 
         <div class="overlay">
             <h2>Aston Martin <br> Vantage</h2>
@@ -87,9 +100,10 @@
 
      <a href="projects/porsche2026.html" class="project-card">
 
-        <img src="images/covers/porsche2026.jpg"
-             alt="Porsche"
-             class="cover-porsche2026">
+        <picture>
+            <source srcset="images/covers/porsche2026.webp" type="image/webp">
+            <img src="images/covers/porsche2026.jpg" alt="Porsche" class="cover-porsche2026" width="667" height="1000" loading="eager" fetchpriority="high" decoding="async">
+        </picture>
 
         <div class="overlay">
             <h2>Porsche</h2>
@@ -104,9 +118,10 @@
 
      <a href="projects/lotusemira2026.html" class="project-card">
 
-        <img src="images/covers/lotusemira2026.jpg"
-             alt="Lotus Emira"
-             class="cover-lotusemira2026">
+        <picture>
+            <source srcset="images/covers/lotusemira2026.webp" type="image/webp">
+            <img src="images/covers/lotusemira2026.jpg" alt="Lotus Emira" class="cover-lotusemira2026" width="800" height="1000" loading="eager" fetchpriority="high" decoding="async">
+        </picture>
 
         <div class="overlay">
             <h2>Lotus Emira</h2>
@@ -120,9 +135,10 @@
 
      <a href="projects/ferrari296gts2026.html" class="project-card">
 
-        <img src="images/covers/ferrari296gtb2026.jpg"
-             alt="Ferrari 296 GTS"
-             class="cover-ferrari296gts2026">
+        <picture>
+            <source srcset="images/covers/ferrari296gtb2026.webp" type="image/webp">
+            <img src="images/covers/ferrari296gtb2026.jpg" alt="Ferrari 296 GTS" class="cover-ferrari296gts2026" width="800" height="1000" loading="lazy" decoding="async">
+        </picture>
 
         <div class="overlay">
             <h2>Ferrari <br> 296 GTS</h2>
@@ -136,9 +152,10 @@
 
      <a href="projects/bmwm340i2026.html" class="project-card">
 
-        <img src="images/covers/bmwm340i2026.jpg"
-             alt="BMW M340i"
-             class="cover-bmwm340i2026">
+        <picture>
+            <source srcset="images/covers/bmwm340i2026.webp" type="image/webp">
+            <img src="images/covers/bmwm340i2026.jpg" alt="BMW M340i" class="cover-bmwm340i2026" width="800" height="1000" loading="lazy" decoding="async">
+        </picture>
 
         <div class="overlay">
             <h2>BMW M340i</h2>
@@ -152,9 +169,10 @@
 
      <a href="projects/lamborghiniurusse2026.html" class="project-card">
 
-        <img src="images/covers/lamborghiniurusse2026.jpg"
-             alt="Lamborghini Urus SE"
-             class="cover-lamborghiniurusse2026">
+        <picture>
+            <source srcset="images/covers/lamborghiniurusse2026.webp" type="image/webp">
+            <img src="images/covers/lamborghiniurusse2026.jpg" alt="Lamborghini Urus SE" class="cover-lamborghiniurusse2026" width="1000" height="667" loading="lazy" decoding="async">
+        </picture>
 
         <div class="overlay">
             <h2>Lamborghini <br> Urus SE</h2>
@@ -168,9 +186,10 @@
 
      <a href="projects/ferrrari296specialea2026.html" class="project-card">
 
-        <img src="images/covers/ferrari296specialea2026.jpg"
-             alt="Ferrari 296 Speciale A"
-             class="cover-ferrari296specialea2026">
+        <picture>
+            <source srcset="images/covers/ferrari296specialea2026.webp" type="image/webp">
+            <img src="images/covers/ferrari296specialea2026.jpg" alt="Ferrari 296 Speciale A" class="cover-ferrari296specialea2026" width="776" height="1000" loading="lazy" decoding="async">
+        </picture>
 
         <div class="overlay">
             <h2>Ferrari 296 <br> Speciale A</h2>
@@ -184,9 +203,10 @@
 
      <a href="projects/ferrariroma2026.html" class="project-card">
 
-        <img src="images/covers/ferrariroma2026.jpg"
-             alt="Ferrari Roma"
-             class="cover-ferrariroma2026">
+        <picture>
+            <source srcset="images/covers/ferrariroma2026.webp" type="image/webp">
+            <img src="images/covers/ferrariroma2026.jpg" alt="Ferrari Roma" class="cover-ferrariroma2026" width="800" height="1000" loading="lazy" decoding="async">
+        </picture>
 
         <div class="overlay">
             <h2>Ferrari Roma</h2>
@@ -200,9 +220,10 @@
 
      <a href="projects/astonmartindbx7072026.html" class="project-card">
 
-        <img src="images/covers/astonmartindbx7072026.jpg"
-             alt="Aston Martin DBX 707"
-             class="cover-astonmartindbx7072026">
+        <picture>
+            <source srcset="images/covers/astonmartindbx7072026.webp" type="image/webp">
+            <img src="images/covers/astonmartindbx7072026.jpg" alt="Aston Martin DBX 707" class="cover-astonmartindbx7072026" width="800" height="1000" loading="lazy" decoding="async">
+        </picture>
 
         <div class="overlay">
             <h2>Aston Martin <br> DBX 707 </h2>
@@ -216,9 +237,10 @@
 
      <a href="projects/minicooper2026.html" class="project-card">
 
-        <img src="images/covers/minicooper2026.jpg"
-             alt="Mini Cooper"
-             class="cover-minicooper2026">
+        <picture>
+            <source srcset="images/covers/minicooper2026.webp" type="image/webp">
+            <img src="images/covers/minicooper2026.jpg" alt="Mini Cooper" class="cover-minicooper2026" width="800" height="1000" loading="lazy" decoding="async">
+        </picture>
 
         <div class="overlay">
             <h2>Mini Cooper</h2>
@@ -232,9 +254,10 @@
 
      <a href="projects/lotuseletre2026.html" class="project-card">
 
-        <img src="images/covers/lotuseletre2026.jpg"
-             alt="Lotus Eletre"
-             class="cover-lotuseletre2026">
+        <picture>
+            <source srcset="images/covers/lotuseletre2026.webp" type="image/webp">
+            <img src="images/covers/lotuseletre2026.jpg" alt="Lotus Eletre" class="cover-lotuseletre2026" width="800" height="1000" loading="lazy" decoding="async">
+        </picture>
 
         <div class="overlay">
             <h2>Lotus Eletre</h2>
