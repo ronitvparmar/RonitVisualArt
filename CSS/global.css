@@ -254,6 +254,23 @@ main.main-full{
     transform:translateY(-2px);
 }
 
+@media(max-width:600px){
+    .about{
+        margin:70px auto 50px;
+        padding-top:0;
+    }
+
+    .about-content p{
+        font-size:.92rem;
+        line-height:1.6;
+        margin-bottom:18px;
+    }
+
+    .about-content h2{
+        margin-bottom:20px;
+    }
+}
+
 
 /*====================================================
     CONTACT
