@@ -317,6 +317,16 @@ main.main-full{
     }
 }
 
+.desktop-br{
+    display:none;
+}
+
+@media(min-width:769px){
+    .desktop-br{
+        display:inline;
+    }
+}
+
 /*==========================================
     CONTACT LINKS
 ==========================================*/
@@ -487,6 +497,10 @@ footer{
 
 .social-icons .fa-behance:hover{
     color:#1769FF;
+}
+
+.social-icons .fa-envelope:hover{
+    color:#EA4335;
 }
 
 /*====================================================
