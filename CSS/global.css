@@ -87,11 +87,8 @@ header{
 
     top:0;
     left:0;
-
     width:100%;
-
-    padding:clamp(16px, 3vw, 30px) clamp(20px, 6vw, 60px);
-
+    padding:clamp(28px, 3vw, 30px) clamp(20px, 6vw, 60px);
     display:flex;
     justify-content:space-between;
     align-items:center;
@@ -106,37 +103,59 @@ header{
     LOGO
 ====================================================*/
 
-.logo-container{
+    .logo-container{
     display:flex;
     flex-direction:column;
-}
+    }
 
-.logo{
-    font-family: 'Coolvetica Rg It', sans-serif;
-    letter-spacing:clamp(3px, 1.2vw, 10px);
-    line-height:1;
-    font-size:clamp(2.1rem, 6vw, 5.2rem);
-    
-}
+    .logo{
+    line-height:0;
+    font-size:0;
+    }
+
+    .logo img{
+    height:clamp(45px, 4.5vw, 54px);
+    width:auto;
+    }
 
 /*====================================================
-    NAVIGATION
+    NAVIGATION (pill)
 ====================================================*/
 
-nav ul{
-    display:flex;
-    flex-wrap:wrap;
-    gap:clamp(14px, 3vw, 30px);
+    nav ul{
+        display:flex;
+        flex-wrap:nowrap;
+        gap:2px;
+        padding:3px;
+        border-radius:999px;
+        background:rgba(28,28,28,.88);
+        border:1px solid rgba(255,255,255,.14);
+        -webkit-backdrop-filter:blur(10px);
+        backdrop-filter:blur(10px);
+    }
+
+    nav a{
+        display:block;
+        padding:clamp(5px, .8vw, 7px) clamp(10px, 1.6vw, 16px);
+        border-radius:999px;
+        font-size:clamp(.78rem, 1.3vw, .95rem);
+        line-height:1.2;
+        color:#bdbdbd;
+        white-space:nowrap;
+        transition:background .25s ease, color .25s ease, box-shadow .25s ease;
 }
 
-nav a{
-    font-size:clamp(.85rem, 1.6vw, 1.1rem);
-    color:#e8e8e8;
-    white-space:nowrap;
-}
-
-nav a:hover{
+nav a:hover,
+nav a:active,
+nav a:focus-visible,
+nav a[aria-current="page"]{
     color:#fff;
+    background:radial-gradient(ellipse at 50% 35%,
+        rgba(255,255,255,.28) 0%,
+        rgba(255,255,255,.10) 65%,
+        rgba(255,255,255,.04) 100%);
+    box-shadow:inset 0 0 0 1px rgba(255,255,255,.10),
+               0 0 14px rgba(255,255,255,.07);
 }
 
 /*====================================================
@@ -193,45 +212,57 @@ main.main-full{
 }
 
 /*====================================================
-    ABOUT
+    ABOUT + CONTACT (shared layout)
 ====================================================*/
 
-.about{
+.about,
+.contact{
     width:90%;
     max-width:900px;
-    margin:120px auto;
-    margin-bottom:75px;
+    margin:120px auto 60px;
     padding-top:40px;
 }
 
-.about-content{
+.about-content,
+.contact-content{
     display:flex;
     flex-direction:column;
     align-items:center;
     text-align:center;
-    margin-top: 25px;
+    margin-top:25px;
 }
 
-.about-content h2{
+.about-content h2,
+.contact-content h2{
+    font-family:'Coolvetica Rg Cond', sans-serif;
     font-size:clamp(1.8rem, 5vw, 2.5rem);
-    margin-bottom:30px;
-    font-family: 'Coolvetica Rg Cond', sans-serif;; 
     letter-spacing:1px;
+    margin-bottom:30px;
     font-style:normal;
 }
 
-.about-content p{
+.about-content p,
+.contact-content p{
     max-width:750px;
     margin-bottom:25px;
     color:#cfcfcf;
-    font-size:1rem;
-    line-height:1.5;
+    font-size:clamp(.80rem, 2.4vw, 1.05rem);
+    line-height:1.7;
+    text-align:center;
+    word-spacing:normal;
+    text-wrap:pretty;
+}
+
+/* keep the email centered, it's a single line */
+.contact-content .email-text{
+    text-align:center;
 }
 
 .contact-btn{
     display:inline-block;
     margin-top:20px;
-    padding:10px 38px;
+    padding:6px 22px;
+    line-height:1.2;
 
     background:transparent;
     color:#fff;
@@ -254,82 +285,36 @@ main.main-full{
     transform:translateY(-2px);
 }
 
-@media(max-width:600px){
-    .about{
-        margin:70px auto 50px;
-        padding-top:0;
-    }
-
-    .about-content p{
-        font-size:.95rem;
-        line-height:1.6;
-        margin-bottom:18px;
-    }
-
-    .about-content h2{
-        margin-bottom:20px;
-    }
-}
-
-
-/*====================================================
-    CONTACT
-====================================================*/
-
-.contact{
-    width:90%;
-    max-width:800px;
-    margin:120px auto;
-    margin-bottom:10px;
-    padding-top:40px;
-}
-
-.contact-content{
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    text-align:center;
-    margin-top: 25px;
-}
-
-.contact-content h2{
-    font-family: 'Coolvetica Rg Cond', sans-serif;
-    font-size:clamp(1.9rem, 5vw, 2.6rem);
-    letter-spacing:1px;
-    margin-bottom:30px;
-    font-style:normal;
-}
-
-.contact-content p{
-    max-width:700px;
-    color:#cfcfcf;
-    line-height:1.5;
-    margin-bottom:35px;
-    font-size: clamp(.95rem, 2.5vw, 1.09rem);
-}
-
 .contact-info{
-    margin-top:10px;
-    margin-bottom:10px;
+    margin:10px 0;
 }
 
 .contact-info h3{
-    font-family: 'Coolvetica Rg Cond', sans-serif;
-    font-size:2.2rem;
-    letter-spacing: 1.7px;
-    margin-bottom:0px;
+    font-family:'Coolvetica Rg Cond', sans-serif;
+    font-size:clamp(1.3rem, 3.5vw, 1.6rem);
+    letter-spacing:1.5px;
+    margin-bottom:6px;
     font-style:normal;
 }
 
-.contact-info a{
-    display:block;
-    margin:1px 0;
-    color:#fff;
-    transition:.3s;
-}
+@media(max-width:600px){
+    .about,
+    .contact{
+        width:82%;
+        margin:105px auto 50px;
+        padding-top:0;
+    }
 
-.contact-info a:hover{
-    color:#bdbdbd;
+    .about-content h2,
+    .contact-content h2{
+        margin-bottom:24px;
+    }
+
+    .about-content p,
+    .contact-content p{
+        margin-bottom:20px;
+        line-height:1.65;
+    }
 }
 
 /*==========================================
@@ -1014,4 +999,21 @@ footer{
   font-weight: bold;
   font-style: normal;
   font-display: swap;
+}
+
+/*====================================================
+    CONTACT LINKS (mobile stack)
+====================================================*/
+
+@media(max-width:600px){
+    .contact-links{
+        flex-direction:column;
+        align-items:center;
+        gap:18px;
+        margin-top:10px;
+    }
+
+    .contact-info{
+        margin:0;
+    }
 }
