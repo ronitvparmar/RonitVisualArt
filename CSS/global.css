@@ -810,6 +810,14 @@ footer{
     transform: scale(calc(var(--zoom, 1) * 1.08));
 }
 
+/* Mercedes E53 AMG 2026 */
+
+.cover-mercedese53amg2026{
+     --zoom: 1;
+    object-position:center 70%;
+    object-fit: cover;
+}
+
 /* Aston Martin Vantage 2026 */
 
 .cover-astonmartinvantage{
