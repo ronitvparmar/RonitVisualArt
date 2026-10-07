@@ -882,14 +882,6 @@ footer{
     object-fit: cover;
 }
 
-/* Lotus Eletre 2026 */
-
-.cover-lotuseletre2026{
-     --zoom: 1;
-    object-position:center 83%;
-    object-fit: cover;
-}
-
 /* Mini Cooper 2026 */
 
 .cover-minicooper2026{
