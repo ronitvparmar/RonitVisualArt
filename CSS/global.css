@@ -810,6 +810,14 @@ footer{
     transform: scale(calc(var(--zoom, 1) * 1.08));
 }
 
+/* Mercedes E250  2026 */
+
+.cover-mercedese2502026{
+     --zoom: 1;
+    object-position:center 70%;
+    object-fit: cover;
+}
+
 /* Mercedes E53 AMG 2026 */
 
 .cover-mercedese53amg2026{
@@ -879,14 +887,6 @@ footer{
 .cover-ferrariroma2026{
      --zoom: 1;
     object-position:center 65%;
-    object-fit: cover;
-}
-
-/* Mini Cooper 2026 */
-
-.cover-minicooper2026{
-     --zoom: 1;
-    object-position:center 75%;
     object-fit: cover;
 }
 
